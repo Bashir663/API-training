@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random hoe generator</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Random asshole generator!</h1>
+    </div>
+    <span class="bold"> </span>
+    <div>
+      <h2><%= person.name.first + " " + person.name.last %></h2>
+    </div>
+    <div><h3>Nationality of <%= person.nat %></h3></div>
+    <div>
+      <img src="<%= person.picture.large %>" alt="some random ass hoe" />
+    </div>
+    <div class="lister">
+      <ul>
+        <li class="header"><span class="bold">Online information:</span></li>
+        <li><span class="bold">Email:</span> <%= person.email %></li>
+        <li>
+          <span class="bold">Username:</span> <%= person.login.username %>
+        </li>
+        <li><span class="bold">PW: </span> <%= person.login.password %></li>
+        <li><span class="bold">Phone number: </span> <%= person.phone %></li>
+        <li>
+          <span class="bold">Social Security Number: </span> <%= person.id.value
+          %>
+        </li>
+      </ul>
+      <ul>
+        <li class="header"><span class="bold">Offline information:</span></li>
+        <li>
+          <span class="bold">Date of birth: </span> <%= person.dob.date %>
+        </li>
+        <li><span class="bold">Age: </span> <%= person.dob.age %></li>
+        <li>
+          <span class="bold">Country: </span> <%= person.location.country %>
+        </li>
+        <li>
+          <span class="bold"> City and State:</span> <%= person.location.city +
+          ", " + person.location.state %>
+        </li>
+        <li>
+          <span class="bold">Street: </span> <%= person.location.street.number +
+          " " + person.location.street.name %>
+        </li>
+        <li>
+          <span class="bold">Postcode:</span> <%= person.location.postcode %>
+        </li>
+      </ul>
+    </div>
+    <footer>
+      <h2>
+        Want the seed? here: <%= seed %> <br />
+        Make sure to uh copy it and never paste it cuz i aint got a place for
+        that :>
+      </h2>
+    </footer>
+  </body>
+</html>
